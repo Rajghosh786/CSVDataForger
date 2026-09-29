@@ -29,12 +29,15 @@
     "kafkajs": "^2.2.4",
     "mongoose": "^9.10.2",
     "multer": "^2.4.0",
+    "node-cron": "^4.6.0",
     "nodemailer": "^10.0.12",
-    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "devDependencies": {
+    "@types/node-cron": "^3.0.11",
     "@types/nodemailer": "^8.0.2",
-    "concurrently": "^10.0.5"
+    "concurrently": "^10.0.5",
+    "pm2": "^7.0.4",
+    "tsx": "^4.23.15"
   }
 }

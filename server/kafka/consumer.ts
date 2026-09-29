@@ -161,7 +161,7 @@ export async function startConsumer() {
 
         //saved in MongoDB
         // console.log(`Starting Excel export for job_${job.jobId}...`);
-        // await generateExcelAndEmail(job.jobId, job.userEmail || "your-email@gmail.com");
+        await generateExcelAndEmail(job.jobId, job.userEmail || "your-email@gmail.com");
       } catch (err: any) {
         console.error(`Job ${job.jobId} failed; offset will not be committed:`, err.message);
         throw err;
