@@ -4,7 +4,7 @@ import { config } from 'dotenv'
 config()
 import fileRoutes from "./routes/fileRoutes"
 import { initProducer } from './kafka/producer'
-import { startConsumer } from './kafka/consumer'
+// import { startConsumer } from './kafka/consumer'
 import { connectingDB } from "./db";
 
 const app = express()
@@ -23,7 +23,7 @@ app.use('/api/files',fileRoutes);
 (async function bootstrap() {
     try {
         await initProducer();
-        await startConsumer(); 
+        // await startConsumer(); 
     } catch (error) {
         console.log(error)
     }

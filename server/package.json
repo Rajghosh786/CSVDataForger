@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch server.ts",
-    "start": "tsx server.ts"
+    "server": "tsx server.ts",
+    "workers": "pm2 start worker.ts --interpreter tsx -i 20 --name csv-worker",
+    "dev": "pm2-runtime start ecosystem.config.cjs",
+    "dev:bg": "pm2 start ecosystem.config.cjs",
+    "stop": "pm2 delete all",
+    "monit": "pm2 monit",
+    "logs": "pm2 logs"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +34,7 @@
     "typescript": "^7.0.2"
   },
   "devDependencies": {
-    "@types/nodemailer": "^8.0.2"
+    "@types/nodemailer": "^8.0.2",
+    "concurrently": "^10.0.5"
   }
 }

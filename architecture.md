@@ -487,5 +487,3 @@ Local Storage
   ↓
 Download
 ```
-
-We'll build that first and test it with a **10 MB CSV** before introducing Kafka.
